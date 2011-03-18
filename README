@@ -1,0 +1,14 @@
+//--------------------------------------------------------------------------------------
+// Usage: php get_max_client.php
+// root only.
+// 
+// This program is used to get MaxClient of apache.
+// Following step.
+// 1、get all pid of httpd.
+// 2、get average Rss of "/proc/$pid/smaps".
+// 3、get average Shared_Clean of "/proc/$pid/smaps".
+// 4、get average Shared_Dirty of "/proc/$pid/smaps".
+// 5、get memory size by free command.
+// 6、math max client by "memorySize / (rssAverage - (Shared_Clean + Shared_Dirty))".
+// 7、print max client.
+//--------------------------------------------------------------------------------------
